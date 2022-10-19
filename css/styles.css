@@ -1,0 +1,75 @@
+/* Body of calculator */
+.mainframe {
+    margin: 2rem 10rem;
+}
+
+/* Heading */
+.heading {
+    padding-bottom: 1.5rem;
+}
+
+.h1txt {
+    font-weight: 450;
+    color: gray;
+}
+
+/* Table */
+table {
+    font-size: larger;
+    font-weight: normal;
+    box-shadow: 5px 5px 10px 2px #999;
+}
+
+/* Table - head */
+table thead {
+    background-color: #25316D;
+}
+
+.table-head tr th {
+    color: white;
+}
+
+th{
+    font-weight: 400;
+}
+
+/* Table - Body */
+tr:nth-child(even) {
+    background-color: #F6F6F6;
+}
+
+/* Inputs of Table */
+input {
+    width: 2.5rem;
+    border-radius: 3px;
+    text-align: center;
+}
+
+select {
+    height: 2rem;
+    border-radius: 3px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Table - Foot */
+tfoot {
+    background-color: #D8D9CF;
+}
+
+tfoot tr:last-child {
+    text-align: left;
+}
+
+/* Buttons */
+
+.buttons button {
+    margin: 1rem 0.2rem;
+}
+
+.btn-clk {
+    background-color: #D8D9CF;
+}

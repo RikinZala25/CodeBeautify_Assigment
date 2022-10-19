@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikin Zala | CodeBeautify Assignment</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Moment.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section class="mainframe">
+        <div class="heading">
+            <h1 class="h1txt">Time Sheet Calculator</h1>
+        </div>
+
+        <form name="form1" id="form1">
+            <table class="table">
+                <thead class="table-head">
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Starting Time</th>
+                        <th scope="col">Ending Time</th>
+                        <th scope="col">Break Deduction</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td><input type="text" required name="monSTH" maxlength="2"> : <input type="text" required
+                                name="monSTM" maxlength="2">
+                            <select name="timePeriod" id="monSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="monETH" maxlength="2"> : <input type="text" required
+                                name="monETM" maxlength="2">
+                            <select name="timePeriod" id="monETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="monBTH" maxlength="2"> : <input type="text" required
+                                name="monBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="monTime">0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td><input type="text" required name="tueSTH" maxlength="2"> : <input type="text" required
+                                name="tueSTM" maxlength="2">
+                            <select name="timePeriod" id="tueSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="tueETH" maxlength="2"> : <input type="text" required
+                                name="tueETM" maxlength="2">
+                            <select name="timePeriod" id="tueETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="tueBTH" maxlength="2"> : <input type="text" required
+                                name="tueBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="tueTime">0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td><input type="text" required name="wedSTH" maxlength="2"> : <input type="text" required
+                                name="wedSTM" maxlength="2">
+                            <select name="timePeriod" id="wedSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="wedETH" maxlength="2"> : <input type="text" required
+                                name="wedETM" maxlength="2">
+                            <select name="timePeriod" id="wedETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="wedBTH" maxlength="2"> : <input type="text" required
+                                name="wedBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="wedTime">0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thrusday</th>
+                        <td><input type="text" required name="thrSTH" maxlength="2"> : <input type="text" required
+                                name="thrSTM" maxlength="2">
+                            <select name="timePeriod" id="thrSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="thrETH" maxlength="2"> : <input type="text" required
+                                name="thrETM" maxlength="2">
+                            <select name="timePeriod" id="thrETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="thrBTH" maxlength="2"> : <input type="text" required
+                                name="thrBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="thrTime">0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Friday</th>
+                        <td><input type="text" required name="friSTH" maxlength="2"> : <input type="text" required
+                                name="friSTM" maxlength="2">
+                            <select name="timePeriod" id="friSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="friETH" maxlength="2"> : <input type="text" required
+                                name="friETM" maxlength="2">
+                            <select name="timePeriod" id="friETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="friBTH" maxlength="2"> : <input type="text" required
+                                name="friBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="friTime">0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Saturday</th>
+                        <td><input type="text" required name="satSTH" maxlength="2"> : <input type="text" required
+                                name="satSTM" maxlength="2">
+                            <select name="timePeriod" id="satSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="satETH" maxlength="2"> : <input type="text" required
+                                name="satETM" maxlength="2">
+                            <select name="timePeriod" id="satETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="satBTH" maxlength="2"> : <input type="text" required
+                                name="satBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="satTime">0.00</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sunday</th>
+                        <td><input type="text" required name="sunSTH" maxlength="2"> : <input type="text" required
+                                name="sunSTM" maxlength="2">
+                            <select name="timePeriod" id="sunSTP">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </td>
+                        <td><input type="text" required name="sunETH" maxlength="2"> : <input type="text" required
+                                name="sunETM" maxlength="2">
+                            <select name="timePeriod" id="sunETP">
+                                <option value="PM">PM</option>
+                                <option value="AM">AM</option>
+                            </select></td>
+                        <td><input type="text" required name="sunBTH" maxlength="2"> : <input type="text" required
+                                name="sunBTM" maxlength="2"> </td>
+                        <td>
+                            <p id="sunTime">0.00</p>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">CodeBeautify</td>
+                        <td>
+                            <h5>Total Hours : </h5>
+                        </td>
+                        <td>
+                            <h5 id="totalHrs">0.00</h5>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-clk" onclick="calculate()"><i class="bi bi-calculator"></i> &nbsp
+                Calculate</button>
+            <button type="button" class="btn btn-clk" onclick="clearAll()"><i class="bi bi-x-circle-fill"></i> &nbsp
+                Clear All</button>
+        </div>
+
+    </section>
+
+    <!-- Custom Js -->
+    <script src="app.js" charset="utf-8"></script>
+
+</body>
+
+</html>
